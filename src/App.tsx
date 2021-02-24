@@ -4,9 +4,9 @@ function App() {
   return (
     <div>
       <h1> Hi, Palloma!</h1>
-      <Button color= "red" />
-      <Button color= "green" />
-      <Button color= "blue" />
+      <Button color= "red" > Botão 1</Button>
+      <Button color= "green" >Botão 2</Button>
+      <Button color= "blue" >Botão 3</Button>
     </div> 
   );
 }
