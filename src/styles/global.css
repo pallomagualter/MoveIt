@@ -76,8 +76,8 @@ a {
     position: relative;
 }
 
-.experience-bar > div div {
+.experience-bar > div > div {
     height: 4px;
     border-radius: 4px;
-    color: var(--green);
+    background: var(--green);
 }
