@@ -85,4 +85,5 @@ a {
 span.current-experience {
     position: absolute;
     top: 12px;
+    transform: translateX(-50%); /* para centralizar com a âncora */
 }
