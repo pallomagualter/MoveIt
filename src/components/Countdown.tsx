@@ -1,23 +1,49 @@
+import { useState, useEffect } from 'react';
 import styles from '../styles/components/Countdown.module.css';
 
 export function Countdown() {
+    const [time, setTime] = useState(25 * 60);
+    const [active, setActive] = useState(false);
+
+    const minutes = Math.floor(time / 60); //para arredondar o valor para baixo
+    const seconds = time % 60;
+
+    const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
+    const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
+
+    function startCountdown() {
+        setActive(true);
+    }
+
+    useEffect(() => {
+        if (active && time > 0) {
+            setTimeout(() => {
+                setTime(time - 1);
+            }, 1000)
+        }
+    }, [active, time]) //executado sempre que o active e o time mudarem
+
     return (
         <div>
             <div className={styles.countdownContainer}>
                 <div>
-                    <span>2</span>
-                    <span>5</span>
+                    <span>{minuteLeft}</span>
+                    <span>{minuteRight}</span>
                 </div>
 
                 <span>:</span>
 
                 <div>
-                    <span>0</span>
-                    <span>0</span>
+                    <span>{secondLeft}</span>
+                    <span>{secondRight}</span>
                 </div>
             </div>
 
-            <button type="button" className={styles.startCountdownButton} >
+            <button 
+                type="button" 
+                className={styles.startCountdownButton} 
+                onClick={startCountdown}
+            >
                 Iniciar um ciclo
             </button>
         </div>
