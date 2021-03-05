@@ -14,17 +14,13 @@ export default function Home() {
         <div>
           <Profile />
           <CompletedChallenges />
+          <Countdown />
         </div>
         <div>
          
         </div>
       </section>
 
-      <section>
-        <div>
-          <Countdown />
-        </div>
-      </section>
   </div> 
   )
 }
