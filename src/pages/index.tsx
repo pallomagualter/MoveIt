@@ -1,4 +1,5 @@
 import { CompletedChallenges } from '../components/CompletedChallenges';
+import { Countdown } from '../components/Countdown';
 import { ExperienceBar } from '../components/ExperienceBar';
 import { Profile } from '../components/Profile';
 
@@ -21,7 +22,7 @@ export default function Home() {
 
       <section>
         <div>
-          <h1>00:00 o'clock!</h1>
+          <Countdown />
         </div>
       </section>
   </div> 
