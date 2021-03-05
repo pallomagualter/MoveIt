@@ -1,6 +1,8 @@
+import styles from '../styles/components/Profile.module.css';
+
 export function Profile() {
     return (
-        <div>
+        <div className={styles.profileContainer}>
             <img src="https://github.com/pallomagualter.png" alt="Palloma Gualter" />
 
             <div>

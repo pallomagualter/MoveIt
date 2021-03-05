@@ -13,9 +13,17 @@ export default function Home() {
           <Profile />
         </div>
         <div>
+         
+        </div>
+      </section>
 
+      <section>
+        <div>
+          <h1>00:00 o'clock!</h1>
         </div>
       </section>
   </div> 
   )
 }
+
+ 
