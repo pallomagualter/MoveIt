@@ -24,6 +24,10 @@
     flex: 1;
 }
 
+.countdownContainer > div span:first-child {
+    border-right: 1px solid #F0F1F3;
+}
+
 .countdownContainer > span {
     font-size: 6.25rem;
     margin: 0 0.5rem;
