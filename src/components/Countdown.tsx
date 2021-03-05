@@ -7,9 +7,9 @@ export function Countdown() {
                 <span>2</span>
                 <span>5</span>
             </div>
-            <div>
+            
                 <span>:</span>
-            </div>
+            
             <div>
                 <span>0</span>
                 <span>0</span>
