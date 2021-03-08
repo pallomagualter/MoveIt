@@ -20,6 +20,7 @@ export function Countdown() {
     function resetCountdown() {
         clearTimeout(countdownTimeout);
         setIsActive(false);
+        setTime(25 * 60); //voltar para os 25 iniciais 
     }
 
     useEffect(() => {
