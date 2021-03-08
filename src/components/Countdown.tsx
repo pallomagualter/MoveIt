@@ -15,6 +15,10 @@ export function Countdown() {
         setIsActive(true);
     }
 
+    function resetCountdown() {
+        setIsActive(false);
+    }
+
     useEffect(() => {
         if (isActive && time > 0) {
             setTimeout(() => {
@@ -43,7 +47,7 @@ export function Countdown() {
                 <button 
                     type="button" 
                     className={`${styles.countdownButton} ${styles.countdownButtonActive}`} 
-                    onClick={startCountdown}
+                    onClick={resetCountdown}
                 >
                     Abandonar ciclo 
                 </button>
