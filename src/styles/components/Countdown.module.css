@@ -72,3 +72,9 @@
     background: var(--red);
     color: var(--white);
 }
+
+.countdownButton:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed; /* desabilitar o click */
+}
