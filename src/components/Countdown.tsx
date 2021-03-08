@@ -4,6 +4,7 @@ import styles from '../styles/components/Countdown.module.css';
 export function Countdown() {
     const [time, setTime] = useState(0.1 * 60);
     const [isActive, setIsActive] = useState(false);
+    const [hasFinished, setHasFinished] = useState(false);
 
     const minutes = Math.floor(time / 60); //para arredondar o valor para baixo
     const seconds = time % 60;
@@ -29,7 +30,8 @@ export function Countdown() {
                 setTime(time - 1);
             }, 1000)
         } else if (isActive && time === 0) {
-            console.log ('finalizou');
+            setHasFinished(true);
+            setIsActive(false);
         }
     }, [isActive, time]) //executado sempre que o active e o time mudarem
 
@@ -48,6 +50,16 @@ export function Countdown() {
                     <span>{secondRight}</span>
                 </div>
             </div>
+
+            { hasFinished && (
+                <button 
+                    disabled
+                    className={styles.countdownButton}
+                >
+                    Ciclo encerrado! 
+                </button>
+            )}
+
 
             { isActive ? (
                 <button 
