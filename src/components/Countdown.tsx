@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/components/Countdown.module.css';
 
 export function Countdown() {
-    const [time, setTime] = useState(25 * 60);
+    const [time, setTime] = useState(0.1 * 60);
     const [isActive, setIsActive] = useState(false);
 
     const minutes = Math.floor(time / 60); //para arredondar o valor para baixo
@@ -20,7 +20,7 @@ export function Countdown() {
     function resetCountdown() {
         clearTimeout(countdownTimeout);
         setIsActive(false);
-        setTime(25 * 60); //voltar para os 25 iniciais 
+        setTime(0.1 * 60); //voltar para os 25 iniciais 
     }
 
     useEffect(() => {
@@ -28,6 +28,8 @@ export function Countdown() {
             countdownTimeout = setTimeout(() => {
                 setTime(time - 1);
             }, 1000)
+        } else if (isActive && time === 0) {
+            console.log ('finalizou');
         }
     }, [isActive, time]) //executado sempre que o active e o time mudarem
 
