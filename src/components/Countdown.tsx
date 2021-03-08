@@ -11,17 +11,20 @@ export function Countdown() {
     const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
+    let countdownTimeout: NodeJS.Timeout;
+
     function startCountdown() {
         setIsActive(true);
     }
 
     function resetCountdown() {
+        clearTimeout(countdownTimeout);
         setIsActive(false);
     }
 
     useEffect(() => {
         if (isActive && time > 0) {
-            setTimeout(() => {
+            countdownTimeout = setTimeout(() => {
                 setTime(time - 1);
             }, 1000)
         }
