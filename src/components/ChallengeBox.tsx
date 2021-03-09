@@ -10,7 +10,6 @@ export function ChallengeBox() {
               Avance de level completando desafios.
             </p>
           </div>
-          
         </div>
     )
 }
