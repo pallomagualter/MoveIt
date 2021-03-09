@@ -27,7 +27,7 @@ export function ChallengeBox() {
 
                 <button
                   type= "button"
-                  className={styles.challengeCompletedButton}
+                  className={styles.challengeSucceededButton}
                 >
                   Completei
                 </button>
